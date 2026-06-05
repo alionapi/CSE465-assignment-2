@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Benchmark Dashboard"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- FP32 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FP32"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2">
+                    <TextView style="@style/MetricLabel" android:text="Frames"/>
+                    <TextView style="@style/MetricLabel" android:text="Avg latency"/>
+                    <TextView android:id="@+id/fp32Frames" style="@style/MetricValue" android:text="0"/>
+                    <TextView android:id="@+id/fp32Latency" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="Avg FPS"/>
+                    <TextView style="@style/MetricLabel" android:text="Target success rate"/>
+                    <TextView android:id="@+id/fp32Fps" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/fp32Success" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="Mean conf"/>
+                    <TextView style="@style/MetricLabel" android:text="Model size"/>
+                    <TextView android:id="@+id/fp32Conf" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/fp32Size" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="p95 latency"/>
+                    <TextView style="@style/MetricLabel" android:text=""/>
+                    <TextView android:id="@+id/fp32P95" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricValue" android:text=""/>
+                </GridLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FP16 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FP16"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2">
+                    <TextView style="@style/MetricLabel" android:text="Frames"/>
+                    <TextView style="@style/MetricLabel" android:text="Avg latency"/>
+                    <TextView android:id="@+id/fp16Frames" style="@style/MetricValue" android:text="0"/>
+                    <TextView android:id="@+id/fp16Latency" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="Avg FPS"/>
+                    <TextView style="@style/MetricLabel" android:text="Target success rate"/>
+                    <TextView android:id="@+id/fp16Fps" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/fp16Success" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="Mean conf"/>
+                    <TextView style="@style/MetricLabel" android:text="Model size"/>
+                    <TextView android:id="@+id/fp16Conf" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/fp16Size" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="p95 latency"/>
+                    <TextView style="@style/MetricLabel" android:text=""/>
+                    <TextView android:id="@+id/fp16P95" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricValue" android:text=""/>
+                </GridLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- INT8 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INT8"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2">
+                    <TextView style="@style/MetricLabel" android:text="Frames"/>
+                    <TextView style="@style/MetricLabel" android:text="Avg latency"/>
+                    <TextView android:id="@+id/int8Frames" style="@style/MetricValue" android:text="0"/>
+                    <TextView android:id="@+id/int8Latency" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="Avg FPS"/>
+                    <TextView style="@style/MetricLabel" android:text="Target success rate"/>
+                    <TextView android:id="@+id/int8Fps" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/int8Success" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="Mean conf"/>
+                    <TextView style="@style/MetricLabel" android:text="Model size"/>
+                    <TextView android:id="@+id/int8Conf" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/int8Size" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="p95 latency"/>
+                    <TextView style="@style/MetricLabel" android:text=""/>
+                    <TextView android:id="@+id/int8P95" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricValue" android:text=""/>
+                </GridLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- System (device-wide stats; same row regardless of precision) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="System"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2">
+                    <TextView style="@style/MetricLabel" android:text="Battery current (μA)"/>
+                    <TextView style="@style/MetricLabel" android:text="Battery level"/>
+                    <TextView android:id="@+id/sysBattery" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/sysBatteryLevel" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="App memory"/>
+                    <TextView style="@style/MetricLabel" android:text="Thermal"/>
+                    <TextView android:id="@+id/sysMem" style="@style/MetricValue" android:text="—"/>
+                    <TextView android:id="@+id/sysThermal" style="@style/MetricValue" android:text="—"/>
+                    <TextView style="@style/MetricLabel" android:text="Input resolution"/>
+                    <TextView style="@style/MetricLabel" android:text="Delegate"/>
+                    <TextView android:id="@+id/sysInputRes" style="@style/MetricValue" android:text="640x640"/>
+                    <TextView android:id="@+id/sysDelegate" style="@style/MetricValue" android:text="CPU(4)"/>
+                </GridLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

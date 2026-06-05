@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App background and surfaces (dark teal theme matching the spec mock) -->
+    <color name="bg">#0E2C2F</color>
+    <color name="card">#173A3F</color>
+    <color name="teal">#2BA9A4</color>
+    <color name="teal_dark">#1F8985</color>
+
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_muted">#FFB8D2D2</color>
+
+    <color name="accent">#00E676</color>
+    <color name="target">#FFEA00</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
