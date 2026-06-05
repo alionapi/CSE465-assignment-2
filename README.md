@@ -113,32 +113,6 @@ for later analysis.
 └── README.md
 ```
 
-### Repository Contents
-
-**CSE465_PA2.pdf**
-
-* Original assignment specification
-
-**PA2_report.pdf**
-
-* Submitted report describing system design, implementation, benchmarking, and evaluation
-
-**pa2/**
-
-* Complete Android Studio project
-* TensorFlow Lite object detection models
-* Voice command system
-* Benchmarking and export functionality
-* Application source code and resources
-
-**README.md**
-
-* Project documentation and usage instructions
-
-```
-```
-
-
 ## Technologies
 
 * Kotlin
