@@ -63,47 +63,81 @@ for later analysis.
 
 ```text
 .
-├── app/
-│   ├── build.gradle.kts
-│   ├── proguard-rules.pro
+├── CSE465_PA2.pdf
+│   └── Assignment specification and requirements
+│
+├── PA2_report.pdf
+│   └── Final project report
+│
+├── pa2/
+│   ├── app/
+│   │   ├── build.gradle.kts
+│   │   ├── proguard-rules.pro
+│   │   │
+│   │   └── src/
+│   │       ├── androidTest/
+│   │       │   └── java/
+│   │       │
+│   │       ├── main/
+│   │       │   ├── AndroidManifest.xml
+│   │       │   │
+│   │       │   ├── assets/
+│   │       │   │   ├── yolo26n_float32.tflite
+│   │       │   │   ├── yolo26n_float16.tflite
+│   │       │   │   └── yolo26n_int8.tflite
+│   │       │   │
+│   │       │   ├── java/
+│   │       │   │   └── Application source code
+│   │       │   │
+│   │       │   └── res/
+│   │       │       ├── layout/
+│   │       │       ├── values/
+│   │       │       └── xml/
+│   │       │
+│   │       └── test/
+│   │           └── java/
 │   │
-│   └── src/
-│       ├── androidTest/
-│       │   └── java/
-│       │
-│       ├── main/
-│       │   ├── AndroidManifest.xml
-│       │   │
-│       │   ├── assets/
-│       │   │   ├── yolo26n_float32.tflite
-│       │   │   ├── yolo26n_float16.tflite
-│       │   │   └── yolo26n_int8.tflite
-│       │   │
-│       │   ├── java/
-│       │   │   └── Application source code
-│       │   │
-│       │   └── res/
-│       │       ├── layout/
-│       │       ├── values/
-│       │       └── xml/
-│       │
-│       └── test/
-│           └── java/
+│   ├── gradle/
+│   │   ├── gradle-daemon-jvm.properties
+│   │   ├── libs.versions.toml
+│   │   └── wrapper/
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
+│   │
+│   ├── build.gradle.kts
+│   ├── gradle.properties
+│   ├── settings.gradle.kts
+│   ├── gradlew
+│   └── gradlew.bat
 │
-├── gradle/
-│   ├── gradle-daemon-jvm.properties
-│   ├── libs.versions.toml
-│   └── wrapper/
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
-│
-├── build.gradle.kts
-├── gradle.properties
-├── settings.gradle.kts
-├── gradlew
-├── gradlew.bat
 └── README.md
 ```
+
+### Repository Contents
+
+**CSE465_PA2.pdf**
+
+* Original assignment specification
+
+**PA2_report.pdf**
+
+* Submitted report describing system design, implementation, benchmarking, and evaluation
+
+**pa2/**
+
+* Complete Android Studio project
+* TensorFlow Lite object detection models
+* Voice command system
+* Benchmarking and export functionality
+* Application source code and resources
+
+**README.md**
+
+* Project documentation and usage instructions
+
+```
+```
+
 
 ## Technologies
 
