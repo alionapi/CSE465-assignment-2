@@ -2,7 +2,6 @@
 CSE465: Mobile Computing | Spring 2026 | programming assignment 2
 
 
-
 ## Overview
 
 
